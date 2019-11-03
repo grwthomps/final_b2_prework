@@ -1,0 +1,5 @@
+<h1><%= @student.name %></h1>
+
+<% @student.courses.each do |course| %>
+  <p><%= course.name %> - <%= @student.grade(course.id) %></p> 
+<% end %>
