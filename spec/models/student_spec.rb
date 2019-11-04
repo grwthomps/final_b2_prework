@@ -18,5 +18,11 @@ RSpec.describe Student, type: :model do
 
       expect(andy.grade(history.id)).to eq(2.4)
     end
+
+    it 'can find a student name' do
+      andy = Student.create(name: 'Andy Dwyer')
+
+      expect(Student.find_student_name(andy.id)).to eq('Andy Dwyer')
+    end
   end
 end
