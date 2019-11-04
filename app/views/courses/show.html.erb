@@ -2,6 +2,6 @@
 
 <% @course.sort_course_students_by_grade.each_with_index do |course_student, index| %>
   <section id='student-<%= index %>'>
-    <p><%= Student.find_by(id: course_student.student_id).name %> - <%= course_student.grade %></p>
+    <p><%= Student.find_student_name(course_student.student_id) %> - <%= course_student.grade %></p>
   </section>
 <% end %>
